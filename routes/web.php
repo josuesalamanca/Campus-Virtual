@@ -4,6 +4,7 @@ use App\Http\Controllers\InsightController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlatformController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,7 @@ use App\Http\Controllers\MemberController;
 |
 */
 
-Route::get('/', function () {
-    return view('landing');
-});
+Route::get('/', [PagesController::class,'index']);
 
 Route::get('/virtual-resources', [PlatformController::class, 'index']);
 Route::get('/member', [MemberController::class, 'index']);

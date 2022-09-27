@@ -4,15 +4,33 @@
     </div>
     <div class="w-full h-4/5 flex flex-row flex-wrap z-20">
 
-        <div onclick="window.location='{{ url('insight/1') }}'" class=" bg-red-500 w-1/2 h-1/2 flex items-center justify-center">
-            {{-- <img class="w-3/4 h-auto" src="{{ URL('images\news\new_1.png') }}" alt=""> --}}
-            <div class="bg-gray-600 w-3/4 h-11/12 relative">
-                <div class="bg-blue-500 w-3/4 h-full right-0 top-0">
-
+        @foreach ($insights as $insight)
+        <div onclick="window.location='{{ url('insight/'.$insight->id.'') }}'" class="w-1/2 h-1/2 flex items-center justify-center">
+            <div class="w-3/4 h-11/12 relative flex">
+                <div class="w-full h-full flex items-end justify-end">
+                    <div class="bg-black-doc w-3/4 h-10/12 flex items-end flex-row-reverse relative bottom-0 right-0">
+                        <div class="w-1/2 h-full flex flex-col items-center justify-evenly">
+                            <h2 class="text-white font-serif text-2xl pr-3">
+                                {{ $insight->title }}
+                            </h2>
+                            <div class="w-full h-auto flex items-center justify-evenly">
+                                <hr class="w-15 h-[3px] bg-yellow-doc border-none">
+                                <p class="text-white font-serif text-base">{{  $insight->date }}</p>
+                            </div>
+                            <div class="flex items-center">
+                                <img class="h-4 w-auto mr-3" src="{{ URL('icons\send.png') }}" alt="">
+                                <a href="{{  $insight->link }}  " class="text-white font-serif text-base">leer artículo</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <img class="absolute w-7/12 h-auto" src="{{ URL(''. $insight->image.'') }}" alt="">
             </div>
         </div>
-        <div class=" w-1/2 h-1/2 flex items-center justify-center">
+        @endforeach
+
+        {{-- <div class=" w-1/2 h-1/2 flex items-center justify-center">
             <img class="w-3/4 h-auto" src="{{ URL('images\news\new_2.png') }}" alt="">
         </div>
         <div class="bg-green-500 w-1/2 h-1/2 flex items-center justify-center">
@@ -20,7 +38,7 @@
         </div>
         <div class=" w-1/2 h-1/2 flex items-center justify-center">
             <img class="w-3/4 h-auto" src="{{ URL('images\news\new_4.png') }}" alt="">
-        </div>
+        </div> --}}
 
     </div>
     <div class=" w-full h-[10%] flex items-center justify-center">

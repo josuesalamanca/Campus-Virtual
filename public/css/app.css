@@ -568,6 +568,10 @@ video {
   left: 0;
 }
 
+.bottom-0 {
+  bottom: 0;
+}
+
 .right-0 {
   right: 0;
 }
@@ -610,6 +614,10 @@ video {
 
 .mt-20 {
   margin-top: 5rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
 }
 
 .mb-5 {
@@ -716,12 +724,16 @@ video {
   height: auto;
 }
 
-.h-1\/12 {
-  height: 8.333333%;
-}
-
 .h-10\/12 {
   height: 83.333333%;
+}
+
+.h-4 {
+  height: 1rem;
+}
+
+.h-1\/12 {
+  height: 8.333333%;
 }
 
 .h-4\/12 {
@@ -796,6 +808,14 @@ video {
   width: 50%;
 }
 
+.w-15 {
+  width: 3.75rem;
+}
+
+.w-7\/12 {
+  width: 58.333333%;
+}
+
 .w-4\/6 {
   width: 66.666667%;
 }
@@ -812,12 +832,20 @@ video {
   flex-direction: row;
 }
 
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+
 .flex-col {
   flex-direction: column;
 }
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -912,19 +940,17 @@ video {
   background-color: rgb(240 82 82 / var(--tw-bg-opacity));
 }
 
+.bg-black-doc {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-yellow-doc {
+  background-color: rgba(234, 213, 131, 1);
+}
+
 .bg-green-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(14 159 110 / var(--tw-bg-opacity));
-}
-
-.bg-gray-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity));
-}
-
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -993,8 +1019,8 @@ video {
   padding-right: 13rem;
 }
 
-.pl-3 {
-  padding-left: 0.75rem;
+.pr-3 {
+  padding-right: 0.75rem;
 }
 
 .text-justify {
@@ -1005,12 +1031,12 @@ video {
   font-family: "Source Serif Pro";
 }
 
-.font-BlackOps {
-  font-family: "Black Ops One";
-}
-
 .font-lobster {
   font-family: "Lobster";
+}
+
+.font-BlackOps {
+  font-family: "Black Ops One";
 }
 
 .text-6xl {
@@ -1088,11 +1114,6 @@ video {
 .text-yellow-50 {
   --tw-text-opacity: 1;
   color: rgb(253 253 234 / var(--tw-text-opacity));
-}
-
-.text-red-800 {
-  --tw-text-opacity: 1;
-  color: rgb(155 28 28 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {

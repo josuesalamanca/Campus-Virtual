@@ -35,4 +35,16 @@ class InsightController extends Controller
             'insight' => $insight
         ]);
     }
+
+    public function show_landing()
+    {
+        $quantity = 4;
+
+        $insight_list = DB::table('insights')
+            ->latest()
+            ->take($quantity)
+            ->get();
+
+        return $insight_list;
+    }
 }
