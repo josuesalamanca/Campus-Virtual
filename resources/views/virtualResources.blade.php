@@ -2,13 +2,18 @@
 
 @section('content')
 
-<div class="bg-gray-200 w-screen min-h-screen max-h-[300vh] flex flex-row flex-wrap items-center justify-evenly p-10">
+<div class=" w-screen min-h-[82vh] h-fit max-h-[300vh] flex justify-evenly flex-wrap pt-10 pb-10">
 
-    <img class=" w-60 h-52" src="{{ URL('images\platforms\p_1.png') }}" alt="">
-
-    <img class=" w-60 h-52" src="{{ URL('images\platforms\p_2.png') }}" alt="">
-
-    <img class=" w-60 h-52" src="{{ URL('images\platforms\p_3.png') }}" alt="">
+    @foreach ($platforms as $platform)
+        <div onclick="window.location='{{ url(''.$platform->link.'') }}'" class="w-3/12 h-[45vh] mt-10 flex justify-center items-center">
+            <div class="bg-red-doc w-11/12 h-11/12 rounded-3xl border-t-8 border-yellow-doc flex justify-evenly items-center flex-col">
+                <img class="w-auto h-[200px]" src="{{ URL(''.$platform->image.'') }}" alt="">
+                <h2 class="text-white font-serif text-2xl pr-3">
+                    {{ $platform->title }}
+                </h2>
+            </div>
+        </div>
+    @endforeach
 
 </div>
 

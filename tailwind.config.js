@@ -8,8 +8,9 @@ module.exports = {
   theme: {
     extend: {
         colors: {
-          'black-doc': 'rgba(0, 0, 0, 0.7)',
-          'yellow-doc':'rgba(234, 213, 131, 1)',
+            'black-doc': 'rgba(0, 0, 0, 0.7)',
+            'yellow-doc':'rgba(234, 213, 131, 1)',
+            'red-doc':'rgba(146, 25, 20, 1)',
         },
     },
     fontFamily: {

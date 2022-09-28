@@ -16,10 +16,10 @@ use App\Http\Controllers\PagesController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// view routes
 
 Route::get('/', [PagesController::class,'index']);
-
-Route::get('/virtual-resources', [PlatformController::class, 'index']);
+Route::get('/virtual-resources', [PagesController::class,'virtualResorces']);
 Route::get('/member', [MemberController::class, 'index']);
 
 //Pendiente clasificar miembros

@@ -36,7 +36,7 @@ class InsightController extends Controller
         ]);
     }
 
-    public function show_landing()
+    public function get_landing()
     {
         $quantity = 4;
 
