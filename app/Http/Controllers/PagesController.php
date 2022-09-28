@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\InsightController;
 use App\Http\Controllers\PlatformController;
+use App\Http\Controllers\MemberController;
 
 class PagesController extends Controller
 {
@@ -32,6 +33,15 @@ class PagesController extends Controller
 
         return view('insights.insightList',[
             'insights' => $insight_list
+        ]);
+    }
+
+    public function member($id){
+
+        $member = (new MemberController)->get($id);
+
+        return view('member',[
+            'member' => $member
         ]);
     }
 }

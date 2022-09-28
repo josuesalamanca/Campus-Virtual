@@ -21,7 +21,7 @@ use App\Http\Controllers\PagesController;
 Route::get('/', [PagesController::class,'index']);
 Route::get('/virtual-resources', [PagesController::class,'virtualResorces']);
 Route::get('/insights-list', [PagesController::class,'insightList']);
-Route::get('/member', [MemberController::class, 'index']);
+Route::get('/member/{id}', [PagesController::class,'member']);
 
 //Pendiente clasificar miembros
 
