@@ -25,7 +25,7 @@ class InsightController extends Controller
 
     }
 
-    public function show_one($id)
+    public function get_one($id)
     {
         $insight = DB::table('insights')
             ->where('id',$id)
@@ -43,6 +43,14 @@ class InsightController extends Controller
         $insight_list = DB::table('insights')
             ->latest()
             ->take($quantity)
+            ->get();
+
+        return $insight_list;
+    }
+
+    public function getAll()
+    {
+        $insight_list = DB::table('insights')
             ->get();
 
         return $insight_list;

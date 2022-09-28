@@ -30,19 +30,9 @@
         </div>
         @endforeach
 
-        {{-- <div class=" w-1/2 h-1/2 flex items-center justify-center">
-            <img class="w-3/4 h-auto" src="{{ URL('images\news\new_2.png') }}" alt="">
-        </div>
-        <div class="bg-green-500 w-1/2 h-1/2 flex items-center justify-center">
-            <img class="w-3/4 h-auto" src="{{ URL('images\news\new_3.png') }}" alt="">
-        </div>
-        <div class=" w-1/2 h-1/2 flex items-center justify-center">
-            <img class="w-3/4 h-auto" src="{{ URL('images\news\new_4.png') }}" alt="">
-        </div> --}}
-
     </div>
     <div class=" w-full h-[10%] flex items-center justify-center">
-        <a href="#" class="font-bold text-xs">Ver todas nuestras noticias</a>
+        <a href="/insights-list" class="font-bold text-xs">Ver todas nuestras noticias</a>
     </div>
 </div>
 

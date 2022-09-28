@@ -25,4 +25,13 @@ class PagesController extends Controller
             'platforms' => $platform_list
         ]);
     }
+
+    public function insightList(){
+
+        $insight_list = (new InsightController)->getAll();
+
+        return view('insights.insightList',[
+            'insights' => $insight_list
+        ]);
+    }
 }

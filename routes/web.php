@@ -20,6 +20,7 @@ use App\Http\Controllers\PagesController;
 
 Route::get('/', [PagesController::class,'index']);
 Route::get('/virtual-resources', [PagesController::class,'virtualResorces']);
+Route::get('/insights-list', [PagesController::class,'insightList']);
 Route::get('/member', [MemberController::class, 'index']);
 
 //Pendiente clasificar miembros
@@ -28,4 +29,4 @@ Route::get('/member', [MemberController::class, 'index']);
 //DB Routes
 Route::get('insight/create', [InsightController::class, 'create']);
 
-Route::get('/insight/{id}', [InsightController::class, 'show_one']);
+Route::get('/insight/{id}', [InsightController::class, 'get_one']);

@@ -24,7 +24,7 @@
         @include('layouts.landing.section-2')
         @include('layouts.landing.section-3')
         @include('layouts.landing.section-4')
-        <div id="particles-js" class="w-[400vw] fixed z-10"></div>
+        {{-- <div id="particles-js" class="w-[400vw] fixed z-10"></div> --}}
 
 
     </div>
