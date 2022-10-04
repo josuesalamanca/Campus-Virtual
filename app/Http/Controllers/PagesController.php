@@ -44,4 +44,30 @@ class PagesController extends Controller
             'member' => $member
         ]);
     }
+
+    public function admin(){
+        return view('home');
+    }
+
+    public function adminInsights()
+    {
+        $insight_list = (new InsightController)->getAll();
+
+        return view('admin.admin',[
+            'insights' => $insight_list
+        ]);
+    }
+    public function adminPlatforms()
+    {
+        # code...
+    }
+    public function adminMember()
+    {
+        # code...
+    }
+    public function adminCreate()
+    {
+        return view('admin.create');
+
+    }
 }

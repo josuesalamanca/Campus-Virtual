@@ -1,6 +1,4 @@
 module.exports = {
-
-    mode:'jit',
   purge: [
     './resources/views/**/*.blade.php',
     './resources/css/**/*.css',
@@ -12,11 +10,11 @@ module.exports = {
             'yellow-doc':'rgba(234, 213, 131, 1)',
             'red-doc':'rgba(146, 25, 20, 1)',
         },
-    },
-    fontFamily: {
-        'lobster': ['"Lobster"'],
-        'BlackOps':['"Black Ops One"'],
-        'serif': ['"Source Serif Pro"']
+        fontFamily: {
+            'lobster': ['"Lobster"'],
+            'BlackOps':['"Black Ops One"'],
+            'serif': ['"Source Serif Pro"']
+        }
     }
   },
   variants: {},

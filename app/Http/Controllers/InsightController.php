@@ -11,17 +11,18 @@ class InsightController extends Controller
 {
     public function create()
     {
-        $insight = new Insight;
-        $insight->title = 'God of War';
-        $insight->resume = 'Lorem ipsum  iente iusto illo, distinctio sit fuga incidunt.';
+
+        // $insight = new Insight;
+        // $insight->title = 'God of War';
+        // $insight->resume = 'Lorem ipsum  iente iusto illo, distinctio sit fuga incidunt.';
 
 
-        $insight->save();
+        // $insight->save();
 
-        $member = Member::find([1, 2]);
-        $insight->members()->attach($member);
+        // $member = Member::find([1, 2]);
+        // $insight->members()->attach($member);
 
-        return 'Success';
+        // return 'Success';
 
     }
 

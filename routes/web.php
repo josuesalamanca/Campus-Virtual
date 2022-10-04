@@ -23,10 +23,23 @@ Route::get('/virtual-resources', [PagesController::class,'virtualResorces']);
 Route::get('/insights-list', [PagesController::class,'insightList']);
 Route::get('/member/{id}', [PagesController::class,'member']);
 
+//admin
+Route::get('/home', [PagesController::class,'admin']);
+Route::get('/admin/insights', [PagesController::class,'adminInsights']);
+Route::get('/admin/create', [PagesController::class,'adminCreate']);
+Route::view('/register-admin','auth.register');
+Route::view('/login-admin','auth.login');
+
+
 //Pendiente clasificar miembros
 
 
 //DB Routes
-Route::get('insight/create', [InsightController::class, 'create']);
+//Route::get('insight/create', [InsightController::class, 'create']);
 
 Route::get('/insight/{id}', [InsightController::class, 'get_one']);
+
+Auth::routes();
+
+
+
