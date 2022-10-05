@@ -9,29 +9,105 @@ use Illuminate\Support\Facades\DB;
 
 class InsightController extends Controller
 {
+    public function index()
+    {
+        $insight_list = $this->getAll();
+
+        return view('admin.admin',[
+            'insights' => $insight_list,
+            'resource' => 'insight'
+        ]);
+    }
+
     public function create()
     {
+        return view('admin.create',[
+            'resource' => 'insight'
+        ]);
+    }
 
-        // $insight = new Insight;
-        // $insight->title = 'God of War';
-        // $insight->resume = 'Lorem ipsum  iente iusto illo, distinctio sit fuga incidunt.';
+    public function store(Request $request)
+    {
+
+        $file = $request->file('image');
+
+        $imageName = time().'-'. $file->getClientOriginalName();
+
+        $imagePath = 'images/insights/'.time().'-'. $file->getClientOriginalName();
+
+        $request->image->move(public_path('images/insights'), $imageName);
+
+        $insight = Insight::create([
+            'title' => $request->input('title'),
+            'date' => $request->input('date'),
+            'link' => $request->input('link'),
+            'resume' => $request->input('resume'),
+            'image' => $imagePath
+        ]);
+
+        return redirect('/admin/insights');
+    }
+
+    public function edit($id)
+    {
+
+        $insight = Insight::find($id);
+
+        return view('admin.edit',[
+            'insight'=>$insight,
+            'resource' => 'insight'
+        ]);
+    }
+
+    public function update(Request $request, $id)
+    {
+
+        if($request->file('image') == null){
+
+            $insight = Insight::where('id',$id)->update([
+                'title' => $request->input('title'),
+                'date' => $request->input('date'),
+                'link' => $request->input('link'),
+                'resume' => $request->input('resume'),
+            ]);
+
+        }else{
+
+            $file = $request->file('image');
+
+            $imageName = time().'-'. $file->getClientOriginalName();
+
+            $imagePath = 'images/insights/'.time().'-'. $file->getClientOriginalName();
+
+            $request->image->move(public_path('images/insights'), $imageName);
+
+            $insight = Insight::where('id',$id)->update([
+                'title' => $request->input('title'),
+                'date' => $request->input('date'),
+                'link' => $request->input('link'),
+                'resume' => $request->input('resume'),
+                'image'=> $imagePath
+            ]);
+        }
 
 
-        // $insight->save();
 
-        // $member = Member::find([1, 2]);
-        // $insight->members()->attach($member);
+        return redirect('/admin/insights');
+    }
 
-        // return 'Success';
+    public function destroy(Insight $insight)
+    {
 
+        $insight->delete();
+
+        return redirect('/admin/insights');
     }
 
     public function get_one($id)
     {
-        $insight = DB::table('insights')
-            ->where('id',$id)
-            ->get();
 
+        $insight = Insight::find($id);
+        // dd($insight);
         return view('insights.insight',[
             'insight' => $insight
         ]);

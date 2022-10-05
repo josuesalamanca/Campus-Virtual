@@ -15,19 +15,22 @@
             <header class="w-full font-semibold bg-gray-200 text-gray-700 py-5 px-6 sm:py-6 sm:px-8 sm:rounded-t-md flex justify-evenly items-center">
 
                 @if ($resource == 'insight')
-                    <p>Crear Noticia:</p>
+                    <p>Editar Noticia:</p>
                 @elseif ($resource == 'platform')
-                    <p>Crear plataforma:</p>
+                    <p>Editar plataforma:</p>
                 @elseif ($resource == 'member')
-                    <p>Crear Integrante:</p>
+                    <p>Editar Integrante:</p>
                 @endif
+
 
             </header>
 
             <div class="block p-6 rounded-lg shadow-lg bg-white-500 w-1/3">
+
                 @if ($resource == 'insight')
-                    <form action="/admin/insights" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/insights/{{ $insight->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('Put')
                         <div class="form-group mb-6">
                             <input type="text" class="form-control block
                             w-full
@@ -45,7 +48,8 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput7"
                             placeholder="Titulo"
-                            name="title">
+                            name="title"
+                            value="{{ $insight->title }}">
                         </div>
                         <div class="form-group mb-6">
                             <input type="date" class="form-control block
@@ -64,7 +68,8 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput8"
                             placeholder="Fecha"
-                            name="date">
+                            name="date"
+                            value="{{ $insight->date }}">
                         </div>
                         <div class="form-group mb-6">
                             <input type="text" class="form-control block
@@ -83,7 +88,8 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput9"
                             placeholder="Link más información"
-                            name="link">
+                            name="link"
+                            value="{{ $insight->link }}">
                         </div>
                         <div class="form-group mb-6">
                             <textarea
@@ -108,7 +114,7 @@
                             rows="3"
                             placeholder="Desarrollo"
                             name="resume"
-                            ></textarea>
+                            >{{ $insight->resume }}</textarea>
                         </div>
                         <div class="form-group mb-6">
                             <input type="file" class="form-control
@@ -146,12 +152,13 @@
                             active:bg-blue-800 active:shadow-lg
                             transition
                             duration-150
-                            ease-in-out">Crear
+                            ease-in-out">Actualizar
                         </button>
                     </form>
                 @elseif ($resource == 'platform')
-                    <form action="/admin/platforms" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/platforms/{{ $platform->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('Put')
                         <div class="form-group mb-6">
                             <input type="text" class="form-control block
                             w-full
@@ -169,6 +176,7 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput7"
                             placeholder="Titulo"
+                            value="{{ $platform->title }}"
                             name="title">
                         </div>
                         <div class="form-group mb-6">
@@ -188,6 +196,7 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput9"
                             placeholder="Link hacía la plaraforma"
+                            value="{{ $platform->link }}"
                             name="link">
                         </div>
                         <div class="form-group mb-6">
@@ -226,12 +235,13 @@
                             active:bg-blue-800 active:shadow-lg
                             transition
                             duration-150
-                            ease-in-out">Crear
+                            ease-in-out">Actualizar
                         </button>
                     </form>
                 @elseif ($resource == 'member')
-                    <form action="/admin/members" method="POST" enctype="multipart/form-data">
+                    <form action="/admin/members/{{ $member->id }}" method="POST" enctype="multipart/form-data">
                         @csrf
+                        @method('Put')
                         <div class="form-group mb-6">
                             <input type="text" class="form-control block
                             w-full
@@ -249,6 +259,7 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="fullName"
                             placeholder="Nombre Completo"
+                            value="{{ $member->fullName }}"
                             name="fullName">
                         </div>
                         <div class="form-group mb-6">
@@ -268,6 +279,7 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="job"
                             placeholder="Cargo"
+                            value="{{ $member->job }}"
                             name="job">
                         </div>
                         <div class="form-group mb-6">
@@ -287,6 +299,7 @@
                             focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="email"
                             placeholder="Correo Electronico"
+                            value="{{ $member->email }}"
                             name="email">
                         </div>
                         <div class="form-group mb-6">
@@ -312,7 +325,7 @@
                             rows="3"
                             placeholder="Perfil Profesional"
                             name="biography"
-                            ></textarea>
+                            >{{ $member->biography }}</textarea>
                         </div>
                         <div class="form-group mb-6">
                             <input type="file" class="form-control
@@ -350,10 +363,11 @@
                             active:bg-blue-800 active:shadow-lg
                             transition
                             duration-150
-                            ease-in-out">Crear
+                            ease-in-out">Actualizar
                         </button>
                     </form>
                 @endif
+
             </div>
         </section>
 

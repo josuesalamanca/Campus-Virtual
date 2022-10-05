@@ -9,8 +9,10 @@ class Member extends Model
 {
     use HasFactory;
 
-    public function insights()
-    {
-        return $this->belongsToMany(Insight::class);
-    }
+    // public function insights()
+    // {
+    //     return $this->belongsToMany(Insight::class);
+    // }
+
+    protected $fillable = ['fullName', 'job', 'email','biography','image'];
 }

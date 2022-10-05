@@ -9,8 +9,10 @@ class Insight extends Model
 {
     use HasFactory;
 
-    public function members()
-    {
-        return $this->belongsToMany(Member::class);
-    }
+    // public function members()
+    // {
+    //     return $this->belongsToMany(Member::class);
+    // }
+
+    protected $fillable = ['title', 'date', 'link','resume','image'];
 }

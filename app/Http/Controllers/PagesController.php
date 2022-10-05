@@ -49,14 +49,6 @@ class PagesController extends Controller
         return view('home');
     }
 
-    public function adminInsights()
-    {
-        $insight_list = (new InsightController)->getAll();
-
-        return view('admin.admin',[
-            'insights' => $insight_list
-        ]);
-    }
     public function adminPlatforms()
     {
         # code...

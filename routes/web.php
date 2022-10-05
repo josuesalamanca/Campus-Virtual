@@ -25,19 +25,20 @@ Route::get('/member/{id}', [PagesController::class,'member']);
 
 //admin
 Route::get('/home', [PagesController::class,'admin']);
-Route::get('/admin/insights', [PagesController::class,'adminInsights']);
 Route::get('/admin/create', [PagesController::class,'adminCreate']);
 Route::view('/register-admin','auth.register');
 Route::view('/login-admin','auth.login');
 
-
+Route::resource('/admin/insights', InsightController::class);
+Route::resource('/admin/platforms', PlatformController::class);
+Route::resource('/admin/members', MemberController::class);
 //Pendiente clasificar miembros
 
 
 //DB Routes
 //Route::get('insight/create', [InsightController::class, 'create']);
 
-Route::get('/insight/{id}', [InsightController::class, 'get_one']);
+ Route::get('/insight/{id}', [InsightController::class, 'get_one']);
 
 Auth::routes();
 
