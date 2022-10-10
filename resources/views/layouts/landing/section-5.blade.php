@@ -1,9 +1,9 @@
 <div
-    id="home"
+    id="final"
     class="
-        w-[85vw]
+        hidden
+        w-screen
         h-fit
-        flex
         justify-center
         items-center
         xl:h-screen"
@@ -38,20 +38,6 @@
             Ingreso a Plataformas
         </button>
     </div>
-</div>
-<div class="
-
-        w-[15vw]
-        h-screen
-        flex
-        justify-center
-        items-center
-        ">
-
-
-    <img id="arrow" src="{{ asset('icons/arrow.png') }}" alt="">
-
-
 </div>
 
 

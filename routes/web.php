@@ -25,7 +25,6 @@ Route::get('/member/{id}', [PagesController::class,'member']);
 
 //admin
 Route::get('/home', [PagesController::class,'admin']);
-Route::get('/admin/create', [PagesController::class,'adminCreate']);
 Route::view('/register-admin','auth.register');
 Route::view('/login-admin','auth.login');
 

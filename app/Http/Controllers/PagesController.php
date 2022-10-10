@@ -46,20 +46,10 @@ class PagesController extends Controller
     }
 
     public function admin(){
+
+
+
         return view('home');
     }
 
-    public function adminPlatforms()
-    {
-        # code...
-    }
-    public function adminMember()
-    {
-        # code...
-    }
-    public function adminCreate()
-    {
-        return view('admin.create');
-
-    }
 }
