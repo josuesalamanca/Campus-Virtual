@@ -1,8 +1,24 @@
-<div class="w-screen h-screen box-border flex flex-col">
+<div class="
+            w-screen
+            h-[250vh]
+            box-border
+            flex
+            flex-col
+            xl:h-screen
+        ">
     <div class=" w-full h-[10%] flex justify-center items-center">
         <h2 class="font-serif text-2xl">Últimas Noticias</h2>
     </div>
-    <div class="w-full h-4/5 flex flex-row flex-wrap z-20">
+    <div class="
+                w-full
+                h-4/5
+                flex
+                flex-col
+                z-20
+
+                xl:flex-wrap
+                xl:flex-row
+            ">
 
         @foreach ($insights as $insight)
         <div onclick="window.location='{{ url('insight/'.$insight->id.'') }}'" class="w-1/2 h-1/2 flex items-center justify-center">

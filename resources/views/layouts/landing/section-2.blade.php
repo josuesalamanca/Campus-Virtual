@@ -1,5 +1,24 @@
-<div class=" w-screen h-screen box-border flex flex-col">
-    <div class="w-full h-2/6 flex flex-row">
+<div class="
+        box-border
+        flex
+        flex-col
+        w-screen
+        pt-15
+        xl:h-screen
+        xl:p-10
+    ">
+
+    <img
+        class="
+            w-full
+            h-full
+            p-2
+        "
+        src="{{ asset('images/layouts/section.svg') }}"
+        alt=""
+    >
+
+    {{-- <div class="w-full h-2/6 flex flex-row">
         <div class=" w-2/5 h-full flex justify-end items-center">
             <img class="h-11/12 w-auto" src="{{ URL('images\img_1_sec_2.png') }}" alt="">
         </div>
@@ -36,5 +55,5 @@
         <div class=" w-2/5 h-full flex items-center">
             <img class="h-full w-auto" src="{{ URL('images\img_2_sec_2.png') }}" alt="">
         </div>
-    </div>
+    </div> --}}
 </div>
