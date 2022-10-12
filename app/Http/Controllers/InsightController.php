@@ -115,7 +115,7 @@ class InsightController extends Controller
 
     public function get_landing()
     {
-        $quantity = 4;
+        $quantity = 3;
 
         $insight_list = DB::table('insights')
             ->latest()

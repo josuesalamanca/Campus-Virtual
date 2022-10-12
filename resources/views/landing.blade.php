@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
 </head>
-<body id="body" class="xl:h-[400vw] ">
+<body id="body" class="xl:h-[400vw]">
 
     <div id="container"
         class="
@@ -24,10 +24,9 @@
             w-screen
             flex
             flex-col
-
             xl:flex-row
             xl:fixed
-            xl:w-[400vw]
+            xl:w-[300vw]
             xl:h-screen
             "
         >
@@ -53,7 +52,7 @@
                 dh = $(document).height(),
                 wh = $(window).height();
                 value = (scroll / (dh-wh))*100;
-            $('#container').css('left', -value * 3 + '%');
+            $('#container').css('left', -value * 2 + '%');
             })
         }
 

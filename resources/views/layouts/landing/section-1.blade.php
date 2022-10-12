@@ -4,11 +4,15 @@
         w-[85vw]
         h-fit
         flex
+        z-20
         justify-center
         items-center
-        xl:h-screen"
+        xl:h-screen
+        xl:w-screen
+    "
+
 >
-    <div class="flex flex-col justify-center items-center z-20">
+    <div class="flex flex-col justify-center items-center ">
         <img
             onclick="window.location='{{ url('/login') }}'"
             src="{{ URL('images/logo.png') }}"
@@ -40,7 +44,7 @@
     </div>
 </div>
 <div class="
-
+        z-20
         w-[15vw]
         h-screen
         flex

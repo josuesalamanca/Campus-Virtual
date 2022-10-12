@@ -1,27 +1,44 @@
-<div class="
-            w-screen
-            h-[250vh]
-            box-border
+<div
+    class="
+        w-screen
+        h-[250vh]
+        box-border
+        flex
+        flex-col
+        items-center
+        xl:flex-row
+        xl:h-screen
+        xl:w-[75vw]
+    "
+>
+    <div
+        class="
+            relative
+            w-1/12
+            h-full
             flex
             flex-col
-            xl:h-screen
-        ">
-    <div class=" w-full h-[10%] flex justify-center items-center">
-        <h2 class="font-serif text-2xl">Últimas Noticias</h2>
+            justify-center
+            items-center
+        "
+    >
+        <hr class="w-2 h-1/3 border-none bg-yellow-doc">
+        <h2 class="writing-mode-vertical-lr m-5 text-3xl font-bold font-serif">
+            Noticias Recientes
+        </h2>
+        <hr class="w-2 h-1/3 border-none bg-yellow-doc">
+
     </div>
     <div class="
-                w-full
-                h-4/5
+                w-8/12
+                h-full
                 flex
                 flex-col
                 z-20
-
-                xl:flex-wrap
-                xl:flex-row
             ">
 
         @foreach ($insights as $insight)
-        <div onclick="window.location='{{ url('insight/'.$insight->id.'') }}'" class="w-1/2 h-1/2 flex items-center justify-center">
+        <div onclick="window.location='{{ url('insight/'.$insight->id.'') }}'" class="w-full h-1/3 flex items-center justify-center">
             <div class="w-3/4 h-11/12 relative flex">
                 <div class="w-full h-full flex items-end justify-end">
                     <div class="bg-black-doc w-3/4 h-10/12 flex items-end flex-row-reverse relative bottom-0 right-0">
@@ -47,8 +64,31 @@
         @endforeach
 
     </div>
-    <div class=" w-full h-[10%] flex items-center justify-center">
-        <a href="/insights-list" class="font-bold text-xs">Ver todas nuestras noticias</a>
+    <div
+        class="
+            relative
+            w-2/12
+            h-full
+            flex
+            flex-col
+            justify-center
+            items-center
+        "
+    >
+        <div
+            class="
+                absolute
+                w-[700px]
+                h-4/5
+                bg-yellow-doc
+            "
+        ></div>
+        <hr class="w-2 h-4/12 border-none bg-red-doc z-20">
+        <h2 class="writing-mode-vertical-lr m-10 text-3xl font-bold font-serif z-20">
+            Nuestro Equipo
+        </h2>
+        <hr class="w-2 h-4/12 border-none bg-red-doc z-20">
     </div>
+
 </div>
 

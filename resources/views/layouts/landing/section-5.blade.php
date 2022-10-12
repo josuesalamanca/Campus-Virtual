@@ -2,10 +2,11 @@
     id="final"
     class="
         hidden
-        w-screen
+        w-[50vw]
         h-fit
         justify-center
         items-center
+        {{-- bg-blue-400 --}}
         xl:h-screen"
 >
     <div class="flex flex-col justify-center items-center z-20">

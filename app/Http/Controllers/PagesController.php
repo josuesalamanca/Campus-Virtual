@@ -9,6 +9,7 @@ use App\Http\Controllers\MemberController;
 
 class PagesController extends Controller
 {
+
     public function index(){
 
         $insight_list = (new InsightController)->get_landing();

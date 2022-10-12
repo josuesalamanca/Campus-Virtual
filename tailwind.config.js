@@ -20,5 +20,8 @@ module.exports = {
   variants: {},
   plugins: [
     require('@tailwindcss/ui'),
+    require('tailwindcss-writing-mode')({
+        variants: ['responsive', 'hover']
+    })
   ]
 }
