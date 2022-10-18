@@ -4,7 +4,7 @@
 
 <div class="bg-gray-200 w-screen h-96 relative flex">
     <img class="relative object-cover w-full h-full z-10" src="{{ URL('images\layouts\insight.jpg') }}" alt="">
-    <div class="bg-cool-gray-900 opacity-50 w-full h-full absolute float-left z-20"></div>
+    <div class="bg-yellow-100 opacity-50 w-full h-full absolute float-left z-20"></div>
     <div class="bg-transparent w-5/6 h-11/12 border-b-4 border-red-800 absolute float-left z-30 ml-32 flex flex-col  ">
 
         <h1 class="text-white font-serif text-6xl drop-shadow-2xl shadow-black pt-15">{{ $insight->title }}</h1>

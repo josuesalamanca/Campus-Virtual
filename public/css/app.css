@@ -751,10 +751,6 @@ video {
   margin-right: 0.75rem;
 }
 
-.ml-1\/2 {
-  margin-left: 50%;
-}
-
 .ml-1\/12 {
   margin-left: 8.333333%;
 }
@@ -979,11 +975,6 @@ video {
 
 .-translate-x-\[100px\] {
   --tw-translate-x: -100px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.translate-x-\[100px\] {
-  --tw-translate-x: 100px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -1253,24 +1244,9 @@ video {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-.bg-blue-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(195 221 253 / var(--tw-bg-opacity));
-}
-
 .bg-blue-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(118 169 250 / var(--tw-bg-opacity));
-}
-
-.bg-green-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(49 196 141 / var(--tw-bg-opacity));
 }
 
 .bg-clip-padding {
@@ -1404,14 +1380,6 @@ video {
 
 .pr-3 {
   padding-right: 0.75rem;
-}
-
-.pl-\[100px\] {
-  padding-left: 100px;
-}
-
-.pl-3\/12 {
-  padding-left: 25%;
 }
 
 .pl-1\/12 {
@@ -1590,6 +1558,11 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-200 {
+  --tw-text-opacity: 1;
+  color: rgb(229 231 235 / var(--tw-text-opacity));
 }
 
 .no-underline {
@@ -2043,28 +2016,20 @@ video {
     height: 13rem;
   }
 
-  .xl\:w-\[400vw\] {
-    width: 400vw;
-  }
-
-  .xl\:w-\[75vw\] {
-    width: 75vw;
-  }
-
-  .xl\:w-\[70vw\] {
-    width: 70vw;
-  }
-
-  .xl\:w-\[60vw\] {
-    width: 60vw;
-  }
-
   .xl\:w-\[300vw\] {
     width: 300vw;
   }
 
   .xl\:w-screen {
     width: 100vw;
+  }
+
+  .xl\:w-\[75vw\] {
+    width: 75vw;
+  }
+
+  .xl\:w-\[60vw\] {
+    width: 60vw;
   }
 
   .xl\:flex-row {

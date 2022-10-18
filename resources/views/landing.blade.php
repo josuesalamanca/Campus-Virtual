@@ -45,6 +45,18 @@
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
 
+        $("#bar").hover(function() {
+
+            document.getElementById("menu").style.display = "block";
+        });
+
+        $("#bar").mouseleave(function() {
+
+            document.getElementById("menu").style.display = "none";
+
+        });
+
+
         if($(window).width() >= 1024){
 
             $(window).scroll(function(){
