@@ -18,6 +18,8 @@ use App\Http\Controllers\PagesController;
 */
 // view routes
 
+Route::view('/build','welcome');
+
 Route::get('/', [PagesController::class,'index']);
 Route::get('/virtual-resources', [PagesController::class,'virtualResorces']);
 Route::get('/insights-list', [PagesController::class,'insightList']);

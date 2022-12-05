@@ -8,13 +8,19 @@ module.exports = {
         colors: {
             'black-doc': 'rgba(0, 0, 0, 0.7)',
             'yellow-doc':'rgba(234, 213, 131, 1)',
-            'red-doc':'rgba(146, 25, 20, 1)',
+            'red-doc':'rgba(206, 14, 45, 1)',
+            'purple-doc':'rgba(128, 57, 142, 0.6)',
         },
         fontFamily: {
-            'lobster': ['"Lobster"'],
-            'BlackOps':['"Black Ops One"'],
-            'serif': ['"Source Serif Pro"']
-        }
+
+            'poppins': ['"poppins"']
+        },
+        width: {
+            'full-page':'5759px',
+            'section-1': '1919px',
+            'section-2': '1981px',
+            'section-3': '1859px',
+         }
     }
   },
   variants: {},

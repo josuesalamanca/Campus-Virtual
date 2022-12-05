@@ -10,9 +10,7 @@
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/gka6mhb.css">
 </head>
 <body id="body" class="xl:h-[400vw]">
 
@@ -22,11 +20,14 @@
             left-0
             h-fit
             w-screen
+            z-10
             flex
             flex-col
             xl:flex-row
             xl:fixed
-            xl:w-[300vw]
+            xl:w-full-page
+            xl:bg-[url('/images/landing/fondo.png')]
+            bg-cover
             xl:h-screen
             "
         >
@@ -35,24 +36,23 @@
         @include('layouts.landing.section-1')
         @include('layouts.landing.section-2')
         @include('layouts.landing.section-3')
-        @include('layouts.landing.section-4')
-        @include('layouts.landing.section-5')
-        {{-- <div id="particles-js" class="w-[400vw] fixed z-10"></div> --}}
+        @include('layouts.landing.footer')
 
 
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     <script type="text/javascript">
 
         $("#bar").hover(function() {
 
             document.getElementById("menu").style.display = "block";
+            document.getElementById("icons").style.display = "none";
         });
 
         $("#bar").mouseleave(function() {
 
             document.getElementById("menu").style.display = "none";
+            document.getElementById("icons").style.display = "flex";
 
         });
 
@@ -68,44 +68,7 @@
             })
         }
 
-        var clicks = 0;
 
-        $("#arrow").click(function() {
-
-            clicks++;
-
-            $('#home').animate({
-                    width: 'toggle'
-                });
-
-            if(clicks%2 == 1){
-
-                $('#arrow').animate(
-                    { deg: 180 },
-                    {
-                    duration: 1200,
-                    step: function(now) {
-                        $('#arrow').css({ transform: 'rotate(' + now + 'deg)' });
-                    }
-                    }
-                );
-
-                document.getElementById("final").style.display = "flex";
-            }else{
-
-                $('#arrow').animate(
-                    { deg: 0 },
-                    {
-                    duration: 1200,
-                    step: function(now) {
-                        $('#arrow').css({ transform: 'rotate(' + now + 'deg)' });
-                    }
-                    }
-                );
-
-                document.getElementById("final").style.display = "none";
-            }
-        });
     </script>
 </body>
 </html>

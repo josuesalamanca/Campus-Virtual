@@ -15,4 +15,6 @@ class Insight extends Model
     // }
 
     protected $fillable = ['title', 'date', 'link','resume','image'];
+
+    protected $dates = ['date'];
 }

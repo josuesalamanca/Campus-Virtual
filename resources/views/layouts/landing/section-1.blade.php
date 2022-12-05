@@ -1,61 +1,31 @@
 <div
-    id="home"
     class="
-        w-[85vw]
-        h-fit
-        flex
-        z-20
-        justify-center
-        items-center
-        xl:h-screen
-        xl:w-screen
-    "
-
->
-    <div class="flex flex-col justify-center items-center ">
-        <img
-            onclick="window.location='{{ url('/login') }}'"
-            src="{{ URL('images/logo.png') }}"
-            alt="logo universidad libre"
-            class="
-                w-auto
-                h-auto
-                mt-20
-                p-5
-                xl:h-52"
-        >
-        <button
-            onclick="window.location='{{ url('virtual-resources') }}'"
-            class="
-                bg-red-500
-                hover:bg-red-400
-                text-white
-                font-bold
-                py-2 px-4
-                border-b-4
-                border-red-700
-                hover:border-red-500
-                rounded
-                mt-10
-                xl:mt-20
-                ">
-            Ingreso a Plataformas
-        </button>
-    </div>
-</div>
-<div class="
-        z-20
-        w-[15vw]
+        w-section-1
         h-screen
         flex
-        justify-center
-        items-center
-        ">
+        flex-row
 
-
-    <img id="arrow" src="{{ asset('icons/arrow.png') }}" alt="">
-
-
+    "
+>
+    <div class="w-5/12 h-screen  flex justify-center">
+        <img
+            class="h-11/12 w-auto"
+            src="{{ URL('images\landing\estudiante_virtual.png') }}"
+            alt=""
+        >
+    </div>
+    <div class="w-7/12 h-10/12  flex flex-col justify-end">
+        <img
+            class="w-9/12 h-auto -translate-x-1/12"
+            src="{{ URL('images\landing\logo_CV_big.png') }}"
+            alt=""
+        >
+        <div class="w-8/12 h-2/12  flex justify-end items-center">
+            <img class="mr-7" src="{{ URL('images\landing\boton-1.png') }}" alt="">
+            <img class="" src="{{ URL('images\landing\boton-2.png') }}" alt="">
+        </div>
+    </div>
 </div>
+
 
 
