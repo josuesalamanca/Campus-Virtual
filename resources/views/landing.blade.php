@@ -45,7 +45,7 @@
 
         $("#bar").hover(function() {
 
-            document.getElementById("menu").style.display = "block";
+            document.getElementById("menu").style.display = "flex";
             document.getElementById("icons").style.display = "none";
         });
 

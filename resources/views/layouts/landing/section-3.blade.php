@@ -17,7 +17,7 @@
                 <img class="w-auto h-2/3" src="{{ URL('images\landing\icono-1.png') }}" alt="">
                 <h2 class="font-poppins font-bold text-5xl text-white ml-5 ">Nuestro Equipo</h2>
             </div>
-            <img  src="{{ URL('images\landing\boton-4.png') }}" alt="">
+            <a href="/member-list"><img  src="{{ URL('images\landing\boton-4.png') }}" alt=""></a>
         </div>
 
         <img class="w-11/12" src="{{ URL('images\landing\team.png') }}" alt="">

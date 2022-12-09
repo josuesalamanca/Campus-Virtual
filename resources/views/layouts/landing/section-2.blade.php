@@ -21,7 +21,7 @@
                 <img class="w-auto h-2/3" src="{{ URL('images\landing\icono-1.png') }}" alt="">
                 <h2 class="font-poppins font-bold text-5xl text-white ml-5 ">Noticias Recientes</h2>
             </div>
-            <img  src="{{ URL('images\landing\boton-3.png') }}" alt="">
+            <a href="/insights-list"><img src="{{ URL('images\landing\boton-3.png') }}" alt=""></a>
         </div>
         <div class="w-9/12 h-10/12  flex flex-row">
             {{-- <div class="w-2/12 h-full">

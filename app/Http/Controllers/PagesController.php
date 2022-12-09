@@ -46,11 +46,24 @@ class PagesController extends Controller
         ]);
     }
 
+    public function memberList(){
+
+        $members = (new MemberController)->getAll();
+
+        return view('member-list',[
+            'members' => $members
+        ]);
+    }
+
     public function admin(){
-
-
 
         return view('home');
     }
+
+    public function offer(){
+
+        return view('offer');
+    }
+
 
 }

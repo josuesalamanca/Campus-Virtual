@@ -21,8 +21,8 @@
             alt=""
         >
         <div class="w-8/12 h-2/12  flex justify-end items-center">
-            <img class="mr-7" src="{{ URL('images\landing\boton-1.png') }}" alt="">
-            <img class="" src="{{ URL('images\landing\boton-2.png') }}" alt="">
+            <a href="/virtual-resources"><img class="mr-7" src="{{ URL('images\landing\boton-1.png') }}" alt=""></a>
+            <a href="/offer"><img class="" src="{{ URL('images\landing\boton-2.png') }}" alt=""></a>
         </div>
     </div>
 </div>

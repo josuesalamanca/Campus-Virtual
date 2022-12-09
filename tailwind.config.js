@@ -9,7 +9,9 @@ module.exports = {
             'black-doc': 'rgba(0, 0, 0, 0.7)',
             'yellow-doc':'rgba(234, 213, 131, 1)',
             'red-doc':'rgba(206, 14, 45, 1)',
+            'red-doc-dark':'rgba(114, 5, 0, 1)',
             'purple-doc':'rgba(128, 57, 142, 0.6)',
+            'black-doc':'rgba(0, 0, 0, 0.45)',
         },
         fontFamily: {
 

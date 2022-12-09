@@ -107,4 +107,10 @@ class MemberController extends Controller
 
         return $member;
     }
+
+    public function getAll()
+    {
+        $member = Member::get();
+        return $member;
+    }
 }

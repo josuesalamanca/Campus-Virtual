@@ -25,8 +25,27 @@
 
     </head>
 <body>
-@include('layouts.header')
-@yield('content')
-@include('layouts.footer')
+    <div class="w-screen h-screen flex">
+        @include('layouts.landing.navBar')
+        @yield('content')
+
+    </div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+
+        $("#bar").hover(function() {
+
+            document.getElementById("menu").style.display = "flex";
+            document.getElementById("icons").style.display = "none";
+        });
+
+        $("#bar").mouseleave(function() {
+
+            document.getElementById("menu").style.display = "none";
+            document.getElementById("icons").style.display = "flex";
+
+        });
+
+    </script>
 </body>
 </html>
