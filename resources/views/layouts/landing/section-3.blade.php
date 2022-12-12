@@ -9,7 +9,7 @@
     "
 >
     <div class="w-2/12 h-full flex items-center">
-        <img class="h-6/12 w-auto -translate-x-1/2 z-30" src="{{ URL('images\landing\simbolo-campus.png') }}" alt="">
+        <img class="h-6/12 w-auto -translate-x-1/2 z-10" src="{{ URL('images\landing\simbolo-campus.png') }}" alt="">
     </div>
     <div class="w-10/12 h-full flex flex-col justify-end">
         <div class="w-full h-1/12 mb-8 flex flex-row items-center justify-around">

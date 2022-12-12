@@ -1,4 +1,19 @@
-<div id="bar" class="w-24 h-screen shadow-md bg-red-doc px-1 transform hover:w-52 z-20">
+<div id="bar"
+  class="
+          fixed
+          left-0
+          flex
+          flex-row
+          w-24
+          h-screen
+          shadow-md
+          bg-red-doc
+          px-1
+          transform
+          hover:w-52
+          z-20
+        "
+>
     <div id="icons" class="w-full h-full flex flex-col items-center pt-7">
         <img class="w-8/12 h-auto " src="{{ URL('images\landing\icono-bar.png') }}" alt="">
         <img class="w-5/12 h-auto mt-5" src="{{ URL('images\landing\icono-menu.png') }}" alt="">
